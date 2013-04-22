@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>記述</th>
-      <th>タスク</th>
+      <th>Due</th>
+      <th>Task</th>
       <th></th>
       <th></th>
       <th></th>

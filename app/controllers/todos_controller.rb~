@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: [:show, :edit, :update, :destroy]
+  before_action :set_todo, only: [:show, :edi\\t, :update, :destroy]
 
   # GET /todos
   def index
@@ -56,6 +56,3 @@ class TodosController < ApplicationController
       params.require(:todo).permit(:due, :task)
     end
 end
-
-
-
