@@ -3,7 +3,11 @@ class TodosController < ApplicationController
 
   # GET /todos
   def index
-    @todos = Todo.order(:due).all
+    if params[:user_id]
+      @todos = Todo.where(user_id: params[:user_id]).order(:due).all
+    else
+      @todos = Todo.order(:due).all
+    end
   end
 
   # GET /todos/1

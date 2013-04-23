@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       todo: TODO
+      task: タスク
     attributes:
       todo:
       task: タスク

@@ -1,7 +1,5 @@
 TodoApp::Application.routes.draw do
-  resources :users do
-    resources :todos
-  end
+  resources :users
 
   resources :todos
 
