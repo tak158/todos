@@ -20,6 +20,11 @@
     <%= f.text_field :task %>
   </div>
   <div class="field">
+    <%= f.label :name %>
+    <% @user = User.all %>
+    <%= f.select :user_id, @user.map {|t| [t.name, t.id]} %>
+  </div>
+  <div class="field">
     <%= f.label :memo %><br />
     <%= f.text_area :memo %>
   </div>
