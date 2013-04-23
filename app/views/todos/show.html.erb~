@@ -12,7 +12,7 @@
 
 <p>
   <strong>Memo:</strong>
-  <%= raw new_line @todo.memo %>
+  <%= @todo.memo %>
 </p>
 
 <%= link_to 'Edit', edit_todo_path(@todo) %>
