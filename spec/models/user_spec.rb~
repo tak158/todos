@@ -7,10 +7,14 @@ describe User do
   describe "保存時に" do
     it "パスワードが与えられた場合は暗号化して格納する" do
       # ここを考えて下さい
+      u = User.new(email: "you@drecom.com", password: "you")
+      expect(u.encrypt_password).to be_false
     end
 
     it "パスワードが空文字列の場合はpasswordカラムは変更されない" do
       # ここを考えて下さい
+      u = User.new(email: "you@drecom.com", password: "")
+      expect(u.encrypt_password).to be_true
     end
   end
 

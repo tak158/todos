@@ -2,7 +2,7 @@
 require "spec_helper" 
 
 describe User do
-  fixtures :users
+  fixtures :users #fixtures 対象のフィクスチャを読み込むo
 
   describe "保存時に" do
     it "パスワードが与えられた場合は暗号化して格納する" do

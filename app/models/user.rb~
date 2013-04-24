@@ -17,18 +17,16 @@ class User < ActiveRecord::Base
     # true を認証できなければ falseを戻します。
     # さらに、認証できた場合はインスタンスのidに認証された
     # ユーザーのidが入るようにします
-    
     # emailの確認
-    if self.email == User.where(id: self.id)["email"]
-      # passwordの確認
-      if 
+    if e = User.where(email: self.email).first
+      if e['password'] == Digest::SHA1.hexdigest(self.password)
+        self.id = e['id']
+      else
+        return false
       end
     else
       return false
     end
-
-    # passwordの確認
-    
   end
 end
 

@@ -1,5 +1,10 @@
 TodoApp::Application.routes.draw do
-  resources :users
+  get "logins/new"
+  get "logins/create"
+  get "logins/destroy"
+  resources :users do
+    resources :todos
+  end
 
   resources :todos
 

@@ -1,15 +1,20 @@
 TodoApp::Application.routes.draw do
+  get "logins/new"
+  get "logins/create"
+  get "logins/destroy"
   resources :users do
     resources :todos
   end
 
   resources :todos
 
+  resources :logins
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root to: 'welcome#index'
+  root to: 'logins#new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
