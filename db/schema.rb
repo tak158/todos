@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130423041135) do
+ActiveRecord::Schema.define(version: 20130423090453) do
 
   create_table "todos", force: true do |t|
     t.date     "due"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20130423041135) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password"
+    t.string   "email"
   end
 
 end

@@ -39,3 +39,8 @@ gem 'jbuilder', '~> 1.0.1'
 
 # To use kaminari
 gem 'kaminari'
+
+# To use RSpec
+group :test do
+  gem "rspec-rails"
+end
